@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node app.js"
   },
-  "author": "",
+  "author": "Sajeevan PUVIKARAN",
   "license": "ISC",
   "dependencies": {
     "elasticsearch": "^14.2.0",
