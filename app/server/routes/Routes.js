@@ -10,7 +10,7 @@ router.get('/populate',(req,res) => {
     return jsonInsert.Brands().then(elasticInsert.Insertion());
 });
 
-router.get('/suv',(req,res) =>{
+router.get('/cars',(req,res) =>{
     const searchParams = {
         'index': 'caradisiac',
         'body': {
