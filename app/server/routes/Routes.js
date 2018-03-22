@@ -14,7 +14,7 @@ router.get('/suv',(req,res) =>{
     const searchParams = {
         'index': 'caradisiac',
         'body': {
-            'size': 20,
+            'size': 10,
             'query': {
                 'match_all': {}
             },
