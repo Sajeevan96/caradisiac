@@ -7,7 +7,7 @@ const connection = require("../files/connection");
 const router = express.Router();
 
 router.get('/populate',(req,res) => {
-    return jsonInsert.Brands().then(elasticInsert.Insertion());
+    jsonInsert.Brands().then(elasticInsert.Insertion()).then( function() { res.send(200,"ok")});
 });
 
 router.get('/cars',(req,res) =>{

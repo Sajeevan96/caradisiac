@@ -11,10 +11,21 @@ var data = [];
 async function Brands () {
     const brands = await getBrands();
     var i = 1;
-    brands.forEach(brand => {
+    for(var brand of brands){
         async function Models(){
             const models = await getModels(brand);
-            models.forEach(marque =>{
+            for(var model of models){
+                data.push(model);
+                console.log("Brand: "+ i);
+                i++;
+            }
+            fs.writeFile("output.json",JSON.stringify(data),'utf8', function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+            });
+            
+            /*models.forEach(marque =>{ //for(var model of models)
                 data.push(marque);
                 fs.writeFile("output.json",JSON.stringify(data),'utf8', function (err) {
                     if (err) {
@@ -23,10 +34,10 @@ async function Brands () {
                 });
                 console.log("Brand: "+ i);
                 i++;
-            });
+            });*/
         }
         Models();
-    });
+    };
 };
 //console.log(Brands());
 
