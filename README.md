@@ -2,6 +2,25 @@
 
 > Drive comfortably
 
+## Usage 
+
+Into app/server folder: 
+
+```sh
+npm install
+npm start
+```
+
+Open a webpage and enter those 2 endpoints:
+
+* localhost:9292/populate
+* localhost:9292/cars
+
+The 10 models with the biggest volume would appear on the cars endpoint in the JSON format. 
+
+
+## Instructions
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
